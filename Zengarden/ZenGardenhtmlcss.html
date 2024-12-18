@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS Zen Garden: The Beauty of CSS Design</title>
+
+	<link rel="stylesheet" media="screen" href="/218/218.css?v=8may2013">
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.csszengarden.com/zengarden.xml">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Dave Shea">
+	<meta name="description" content="A demonstration of what can be accomplished visually through CSS-based design.">
+	<meta name="robots" content="all">
+
+	<script src="http://use.typekit.net/xtk3kmd.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+
+	<!--[if lt IE 9]>
+	<script src="script/html5shiv.js"></script>
+	<![endif]-->
+	<style>
+		/* css Zen Garden submission 218 - 'Apothecary', by Trent Walton, http: //www.trentwalton.com/ */
+/* css released under Creative Commons License - http: //creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* TYPEKIT_KIT_ID: xtk3kmd */
+
+html,body,div,span,object,h1,h2,h3,h4,h5,h6,p,a,abbr,acronym,em,img,ol,ul,li {border: 0;font-weight: inherit;font-style: inherit;font-size: 100%;font-family: inherit;vertical-align: baseline;margin: 0;padding: 0;}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: auto;
+  background: #faf3e6;
+  background-size: 22em;
+}
+
+body {
+  font: 112.5%/1.3 "ltc-bodoni-175",serif;
+  color: #3f3d3a;
+  overflow: hidden;
+}
+
+body:before, body:after {
+  content: '';
+  display: block;
+  width: 0; 
+  height: 0; 
+}
+
+body:before {
+  border-left: 45px solid #faf3e6;
+  border-right: 45px solid #faf3e6;
+  border-top: 45px solid transparent;
+  background: #f7644d url('img-halftone.png') repeat;
+  margin: 0 auto -45px;
+}
+
+body:after {
+  border-left: 7em solid #faf3e6;
+  border-right: 7em solid #faf3e6;
+  border-bottom: 10em solid transparent;
+  background: #ffb14d url('img-halftone.png') repeat;
+  margin: -10em auto 0;
+}
+
+.page-wrapper {
+  width: 100%;
+  margin: 0.25em auto;
+  max-width: 1800px;
+  position: relative;
+  padding: 0 4%;
+}
+
+.page-wrapper:before {
+  content: "";
+  height: 20px;
+  background: 
+    url('img-lg-horiz-border.png') repeat-x 0 -2px;
+  background-size: 40em;
+  display: block;
+}
+
+.page-wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h1, h2, h3, h4, h5 {
+  text-align: center;
+  color: #272625;
+  text-transform: uppercase;
+}
+
+a {
+  color: #e5452c;
+}
+
+a:hover, a:focus {
+  color: #3f3d3a;
+}
+
+p {
+  margin-bottom: 0.15em;
+}
+
+/* -------INTRO SECTION------ */
+.intro {
+  clear: both;
+  padding-top: 2em;
+}
+
+.intro p {
+  margin: 0 auto 1em;
+}
+
+
+.summary p:nth-child(2) {
+  font-style: italic;
+}
+
+.summary a {
+  display: inline-block;
+}
+
+.intro h1 {
+  font-size: 3em;
+  line-height: 1;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+}
+
+.intro h1:before {
+  content: "Dr. Shea\2019s Miraculous";
+  font-family: "refrigerator-deluxe",sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  display: block;
+  font-size: 1.12rem;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  background: url('img-sprite.png') no-repeat center 0.25em;
+  background-size: 25rem;
+  margin-bottom: 1.3em;
+}
+
+.intro h2 {
+  font-family: "french-clarendon-ornamented",sans-serif;
+  font-size: 2.25em;
+  font-weight: 400;
+  padding-top: 4.5em;
+  margin-top: 0.1em;
+  margin-bottom: 0em;
+  letter-spacing: 0.05rem;
+  line-height: 1.275em;
+  background: url('img-bottle.png') no-repeat center 0.75em;
+  background-size: 1.45em;
+}
+
+.preamble {
+  margin: 0 auto 1em;
+}
+
+.preamble p {
+  margin-bottom: 0.15em;
+}
+
+.preamble h3 {
+  margin:  0.5em auto 0.55em;
+  padding: 0.5em 0 0.55em;
+  font-family: "grecian-light-face",sans-serif;
+  font-size: 1.5em;
+  line-height: 1;
+  background: 
+    url('img-lg-horiz-border.png') repeat-x top right,
+    url('img-lg-horiz-border.png') repeat-x bottom left;
+  background-size: 13em;
+}
+
+.preamble p:first-line {
+  text-transform: uppercase;
+}
+
+.preamble p:nth-child(1n+3) {
+  text-indent: 1.5em;
+}
+
+.preamble p:nth-child(1n+3):first-line {
+  text-transform: none;
+}
+
+
+/* -------SIDEBAR ASIDE------- */
+.design-selection h3 {
+  font-family: "refrigerator-deluxe",sans-serif;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+  padding: 0.5em 0;
+  margin: 0.35em auto 0.75em;
+  background: 
+    url('img-lg-horiz-border.png') repeat-x top right,
+    url('img-lg-horiz-border.png') repeat-x bottom left;
+  background-size: 15em;
+  line-height: 1;
+}
+
+.design-selection {
+  margin: 0 auto;
+}
+
+.design-selection ul {
+  list-style-type: none;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.design-selection li {
+  color: transparent;
+  margin-bottom: 0.28em;
+  clear: both;
+}
+
+.design-selection li a {
+  text-decoration: none;
+  color: #3f3d3a;
+}
+
+.sidebar a:hover, sidebar a:focus {
+  color: #e5452c;
+}
+
+.design-name {
+  font-style: italic;
+  background: #faf3e6;
+  padding-right: 0.25em;
+}
+
+.design-name:after {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    color: #3f3d3a;
+    content: "....................................................................................................................."
+}
+
+.designer-name {
+  float: right;
+  font-family: "refrigerator-deluxe",sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+  background: #faf3e6;
+  padding-left: 0.25em;
+}
+
+h3.archives, h3.resources {
+  display: none;
+}
+
+.design-archives {
+  margin: 0.8em auto;
+  position: relative;
+}
+
+.design-archives ul {
+  list-style-type: none;
+  background: 
+    url('img-lg-horiz-border.png') repeat-x top right,
+    url('img-lg-horiz-border.png') repeat-x bottom left;
+  background-size: 36em;
+  padding: 1.25em 0;
+}
+
+.design-archives .viewall {
+  text-align: center;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  font-size: 1.125em;
+}
+
+.design-archives .previous a, .design-archives .next a {
+  position: absolute;
+  overflow: hidden;
+  width: 2em;
+  height: 1.25em;
+  color: #3f3d3a;
+  text-decoration: none;
+  white-space: nowrap;
+  text-indent: -9999px;
+  -webkit-transition: margin ease-out 0.1s;
+  -moz-transition: margin ease-out 0.1s;
+  -o-transition: margin ease-out 0.1s;
+  transition: margin ease-out 0.1s;
+}
+
+.design-archives .next a:hover, .design-archives .next a:focus {
+  margin-right: -4px;
+}
+
+.design-archives .previous a:hover, .design-archives .previous a:focus {
+  margin-left: -4px;
+}
+
+.viewall a, .zen-resources a {
+   color: #3f3d3a;
+   text-decoration: none;
+}
+
+.design-archives .next a {
+  right: 0;
+  background: url('img-sprite.png') no-repeat bottom right;
+  background-size: 20em;
+}
+
+.design-archives .previous a {
+  left: 0;
+  background: url('img-sprite.png') no-repeat bottom left;
+  background-size: 20em;
+}
+
+.sidebar .wrapper {
+  background: 
+    url('img-lg-horiz-border.png') repeat-x bottom left;
+  background-size: 40em;
+  margin: 0 2px -1px;
+}
+
+.zen-resources {
+  background:  url('img-pointer-guy-sm.png') no-repeat 28% 95%;
+  background-size: 5em;
+  overflow: hidden;
+}
+
+.zen-resources:after, .zen-resources ul:after {
+  width: 9em;
+  height: 9em;
+  content: '';
+  margin: 0 auto;
+  display: block;
+  z-index: -1;
+  position: relative;
+}
+
+.zen-resources:after {
+  margin-top: 9em;
+  background: #ffb14d url('img-halftone.png') repeat;
+   -webkit-transform: rotate(45deg) translateY(5.25em) translateX(2.75em);
+     -moz-transform: rotate(45deg) translateY(5.25em) translateX(2.75em);
+      -ms-transform: rotate(45deg) translateY(5.25em) translateX(2.75em);
+       -o-transform: rotate(45deg) translateY(5.25em) translateX(2.75em);
+          transform: rotate(45deg) translateY(5.25em) translateX(2.75em);
+}
+
+.zen-resources ul:after {
+  margin-top: 3.5em;
+  background: #bad1c2 url('img-halftone.png') repeat;
+   -webkit-transform: rotate(45deg) translateY(0.2em) translateX(3em);
+     -moz-transform: rotate(45deg) translateY(0.2em) translateX(3em);
+      -ms-transform: rotate(45deg) translateY(0.2em) translateX(3em);
+       -o-transform: rotate(45deg) translateY(0.2em) translateX(3em);
+          transform: rotate(45deg) translateY(0.2em) translateX(3em);
+  margin-bottom: -21.5em;
+}
+
+.zen-resources ul {
+  list-style-type: none;
+  margin: 0 auto;
+  font-family: "refrigerator-deluxe",sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.zen-resources li {
+  display: block;
+  text-align: center;
+  line-height: 1.6;
+}
+
+
+/* -------EXPLANATION------- */
+.explanation {
+  padding: 1.75em 0 0;
+  margin: 0 auto;
+  position: relative;
+  background: #faf3e6;
+}
+
+.explanation p:first-line,
+.participation p:first-line,
+.benefits p:first-line {
+  text-transform: uppercase;
+}
+
+.explanation p:nth-child(1n+3):first-line,
+.participation p:nth-child(1n+3):first-line,
+.benefits p:nth-child(1n+3):first-line {
+  text-transform: none;
+}
+
+.explanation h3 {
+  font-size: 2.15em;
+  padding-bottom: 1.75rem;
+  font-style: italic;
+  letter-spacing: 0.03em;
+  text-align: center;
+  width: 100%;
+}
+
+.explanation p:nth-child(1n+3) {
+  text-indent: 1.5em;
+}
+
+.participation {
+  padding: 1.5em 0 0.5em;
+  background: url('img-lg-horiz-border.png') repeat-x top left;
+  background-size: 40em;
+  margin: 3em 2px 0;
+}
+
+.participation h3 {
+  font-family: "refrigerator-deluxe",sans-serif;
+  font-size: 2.5em;
+  letter-spacing: 0.025em;
+  padding-bottom: 1rem;
+  background: url('img-sprite.png') no-repeat center center;
+  background-size: 9em;
+}
+
+.participation p {
+  margin: 0 auto;
+}
+
+.participation p:nth-child(2) {
+  background: 
+    url('img-lg-horiz-border.png') repeat-x top left;
+  background-size: 44em;
+  padding-top: 2em;
+}
+
+.participation p:nth-child(1n+3) {
+  text-indent: 1.5em;
+}
+
+.benefits {
+  padding: 1em 0 20em;
+  margin: 0 2px;
+  background: url('img-lg-horiz-border.png') repeat-x bottom center;
+  background-size: 45em;
+  position: relative;
+}
+
+.benefits p:last-child {
+  background: 
+    url('img-lg-horiz-border.png') repeat-x bottom left;
+  background-size: 44em;
+  padding-bottom: 1em;
+}
+
+.benefits h3 {
+  margin: 0em auto 0.5em;
+  font-family: "grecian-light-face",sans-serif;
+  font-size: 2.65em;
+  background: 
+    url('img-lg-horiz-border.png') repeat-x top center,
+    url('img-lg-horiz-border.png') repeat-x bottom left;
+  background-size: 12em;
+  padding: 0.25em 0;
+}
+
+.benefits p {
+    margin: 0 auto;
+}
+
+.benefits:before {
+  content: 'Apply Liberally';
+  font-size: 3em;
+  position: absolute;
+  bottom: 3.5rem;
+  text-align: center;
+  width: 100%;
+  font-family: "french-clarendon-ornamented",sans-serif;
+  text-transform: uppercase;
+  padding-bottom: 14.35rem;
+  letter-spacing: 0.03em;
+}
+
+.benefits:after {
+  content: 'And Regularly!';
+  font-size: 3em;
+  position: absolute;
+  bottom: -13rem;
+  text-align: center;
+  width: 100%;
+  font-family: "french-clarendon-ornamented",sans-serif;
+  text-transform: uppercase;
+  padding-bottom: 14.35rem;
+  letter-spacing: 0.03em;
+}
+
+.benefits p:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 26em; 
+  margin: 0 auto -26em;
+  padding-bottom: 2em;
+  background:  url('img-look-right-sm.png') no-repeat center 7.75rem;
+  background-size: 8.5rem;
+}
+
+.requirements h3 {
+  font-family: "refrigerator-deluxe",sans-serif;
+  font-size: 2.75em;
+  letter-spacing: 0.025em;
+  margin-bottom: 0.725em;
+  position: absolute;
+  top: 0.1em;
+  text-align: center;
+  display: block;
+  padding-bottom: 1rem;
+  width: 100%;
+  background: 
+    url('img-lg-horiz-border.png') repeat-x bottom left;
+  background-size: 16em;
+}
+
+.requirements {
+  padding: 6.5em 0 2em;
+  margin: 0 auto 4.15em;
+  position: relative;
+  background: 
+    url('img-lg-horiz-border.png') repeat-x bottom left;
+  background-size: 46em;
+}
+
+.requirements p:nth-child(1n+3) {
+  text-indent: 1.5em;
+}
+
+.requirements p:last-child {
+  font-style: italic;
+  position: absolute;
+  left: 0;
+  bottom: -2em;
+  margin-bottom: -2.75em;
+  text-align: center;
+  width: 100%; 
+  text-indent: 0;
+}
+
+
+footer:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 15em; 
+  margin: 0 auto -13.5em;
+  background:  url('img-lookup.png') no-repeat center center;
+  background-size: 10em;
+}
+
+
+footer {
+  background: 
+    url('img-lg-horiz-border.png') repeat-x bottom left;
+  background-size: 40em;
+  margin: 5.5em 1px -1px;
+  text-align: center;
+  font-family: "refrigerator-deluxe",sans-serif;
+  font-size: 1.15em;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 8.5em;
+}
+
+footer a {
+  text-decoration: none;
+  background: #272625;
+  padding: 0.15rem 0.5rem;
+  color: #faf3e6;
+  margin: 0 0.15em;
+  letter-spacing: 0.05em;
+}
+
+footer a:hover, footer a:focus {
+  background-color: #e5452c;
+}
+
+
+@media (min-width:600px) {
+  body {
+    font-size: 1.12em;
+    line-height: 1.6;
+  }
+  
+  .intro p,
+  .preamble,
+  .design-selection,
+  .design-selection ul,
+  .design-archives,
+  .zen-resources ul,
+  .participation p,
+  .benefits h3,
+  .benefits p {
+    max-width: 30rem;
+  }
+  
+  
+  .explanation,
+  .requirements {
+    max-width: 30rem;
+  }
+
+  body:before {
+    border-left: 89px solid #faf3e6;
+    border-right: 89px solid #faf3e6;
+    border-top: 89px solid transparent;
+    margin: 0 auto -5em;
+  }
+  
+  body:after {
+    border-left: 11em solid #faf3e6;
+    border-right: 11em solid #faf3e6;
+    border-bottom: 14.5em solid transparent;
+    margin: -14.5em auto 0;
+    position:relative;
+    z-index:-2;
+  }
+  
+  .page-wrapper {
+    width: 99%;
+    background: 
+      url('img-lg-vert-border.png') repeat-y top left,
+      url('img-lg-vert-border.png') repeat-y right 100px;
+    background-size: 0.75em;
+    margin: 0.5em auto;
+    padding: 0 2px;
+  }
+  
+  .page-wrapper:before {
+  background-size: 50em;
+}
+  
+  .intro {
+    padding-top: 7em;
+  }
+  
+  .intro h1 {
+    font-size: 5.25em;
+    line-height: 1;
+    max-width: 94%;
+    margin: 0 auto;
+  }
+  
+  .intro h1:before {
+    font-size: 0.25em;
+    letter-spacing: 0.175rem;
+    font-weight: 700;
+    background: url('img-sprite.png') no-repeat center 0.2em;
+    background-size: 38rem;
+    margin-bottom: 1.2em;
+  }
+  
+  .intro h2 {
+    font-size: 3.75em;
+    padding-top: 4.25em;
+    margin-top: 0.85em;
+    margin-bottom: 0em;
+    line-height: 1.275em;
+    background: url('img-bottle.png') no-repeat center top;
+    background-size: 1.65em;
+  }
+  
+  .summary p:nth-child(2) {
+    text-align: center;
+  }
+  
+  .preamble h3 {
+    font-size: 2.5em;
+  }
+
+  .preamble h3:first-line {
+    font-family: "refrigerator-deluxe",sans-serif;
+    font-size: 1.1em;
+    display: inline-block;
+    margin: 0 auto;
+    line-height: 1.25;
+    letter-spacing: 0.025em;
+  }
+  
+  .design-selection h3 {
+    font-size: 2.6em;
+    letter-spacing: 0.05em;
+    padding: 0.75em 0;
+  } 
+  
+  .design-archives .viewall {
+    font-size: 1.8em;
+  }
+  
+  .design-archives .previous a, .design-archives .next a {
+    width: 4em;
+    height: 2.4em
+  }
+  
+  .design-archives .next a {
+    background: url('img-sprite.png') no-repeat bottom right;
+    background-size: 35em;
+  }
+
+  .design-archives .previous a {
+    background: url('img-sprite.png') no-repeat bottom left;
+    background-size: 35em;
+  }
+  
+  
+  .zen-resources:after, .zen-resources ul:after {
+    width: 24em;
+    height: 24em;
+  }
+  
+  .zen-resources {
+    background:  url('img-pointer-guy.png') no-repeat 28% 95%;
+  }
+  
+  .zen-resources:after {
+    margin-top: 20em;
+    background: #ffb14d url('img-halftone.png') repeat;
+     -webkit-transform: rotate(45deg) translateY(11em) translateX(8.5em);
+       -moz-transform: rotate(45deg) translateY(11em) translateX(8.5em);
+        -ms-transform: rotate(45deg) translateY(11em) translateX(8.5em);
+         -o-transform: rotate(45deg) translateY(11em) translateX(8.5em);
+            transform: rotate(45deg) translateY(11em) translateX(8.5em);
+  }
+  
+  .zen-resources ul:after {
+    margin-top: 3em;
+    background: #bad1c2 url('img-halftone.png') repeat;
+     -webkit-transform: rotate(45deg) translateY(4.75em) translateX(9em);
+       -moz-transform: rotate(45deg) translateY(4.75em) translateX(9em);
+        -ms-transform: rotate(45deg) translateY(4.75em) translateX(9em);
+         -o-transform: rotate(45deg) translateY(4.75em) translateX(9em);
+            transform: rotate(45deg) translateY(4.75em) translateX(9em);
+    margin-bottom: -52.5em;
+  }
+  
+  .zen-resources {
+    background:  url('img-pointer-guy.png') no-repeat 43.8% bottom;
+    background-size: 13em;
+  }
+  
+  .zen-resources ul {
+    font-size: 0.885em;
+  }
+  
+  .zen-resources a {
+    font-size: 1.25em;
+  }
+  
+  .explanation {
+    padding: 10.75em 0 0.5em;
+    width: 84%;
+    margin: 1px auto 0;
+    position: relative;
+    background: #faf3e6;
+  }
+     
+  .explanation h3 {
+    font-size: 3em;
+    line-height: 1;
+    font-style: italic;
+    letter-spacing: 0.03em;
+    position: absolute;
+    top: 1em;
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+  
+  .explanation p {
+    line-height: 1.475;
+  }
+  
+  .participation {
+    background-size: 48em;
+  }
+  
+  .participation h3 {
+    font-size: 3.25em;
+    background-size: 8em;
+  }
+  
+  .participation p:nth-child(2) {
+    padding-top: 2em;
+  }
+  
+  .participation p:nth-child(1n+3) {
+    text-indent: 1.5em;
+  }
+  
+  .benefits {
+    padding: 1em 0 24em;
+  }
+  
+  .benefits h3 {
+    font-size: 3em;
+  }
+  
+  .benefits:before {
+    bottom: 5.5rem;
+  }
+
+  .benefits:after {
+    bottom: -13rem;
+  }
+  
+  .benefits p:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 25em; 
+    margin: 0 auto -26em;
+    padding-bottom: 2em;
+    background:  url('img-look-right.png') no-repeat center center;
+    background-size: 32%;
+  }
+  
+  .requirements {
+    padding: 11.5em 0 2.5em;
+    width: 84%;
+    margin: 0 auto 4.15em;
+  }
+  
+  .requirements h3 {
+    font-size: 4.5em;
+    margin-bottom: 0.725em;
+    padding-bottom: 1.5rem;
+    background-size: 10em;
+  }
+    
+  footer {
+    padding-bottom: 14em;
+  }
+  
+  footer:after {
+    background:  url('img-lookup.png') no-repeat center bottom;
+    background-size: 15em;
+  }
+  
+  .participation h3:before, .participation h3:after {
+    position: absolute;
+    font-size: 1.125rem;
+    color: #3f3d3a;
+    letter-spacing: 0;
+    font-family: "ltc-bodoni-175",serif;
+    font-style: italic;
+    text-transform: lowercase;
+  }
+  
+  .participation h3:after {
+    content: '5.23 fl oz';
+    top: 1.1em;
+    right: 1.6em;
+  }
+  
+  .participation h3:before {
+    content: 'no. 218';
+    top: 1.1em;
+    left: 1.6em;
+  }
+}
+
+
+@media (min-width:800px) {
+  body {
+    font-size: 1.188em;
+  }
+  
+  .intro {
+    padding-top: 8em;
+  }
+  
+  .intro p,
+  .preamble,
+  .design-selection,
+  .design-selection ul,
+  .design-archives,
+  .zen-resources ul,
+  .participation p,
+  .benefits h3,
+  .benefits p {
+    max-width: 36rem;
+  }
+  
+  
+  .explanation,
+  .requirements {
+    max-width: 36rem;
+  }
+  
+  body:before {
+    border-left: 115px solid #faf3e6;
+    border-right: 115px solid #faf3e6;
+    border-top: 115px solid transparent;
+    margin: 0 auto -6em;
+  }
+  
+  .intro h1 {
+    font-size: 5.65em;
+  }
+  
+  .intro h1:before {
+    font-size: 2rem;
+    letter-spacing: 0.175rem;
+    font-weight: 700;
+    background: url('img-sprite.png') no-repeat center 0.25em;
+    background-size: 42rem;
+    margin-bottom: 1em;
+  }
+  
+  .intro h2 {
+    padding-top: 4.5em;
+    margin-top: 0.7em;
+    margin-bottom: 0em;
+    background-size: 1.75em;
+  }
+  
+  .preamble h3 {
+    font-size: 3em;
+  }
+  
+  
+  .zen-resources li {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .zen-resources li a {
+    margin: 0 0.75em;
+  }
+
+  .zen-resources li:first-child a {
+    margin-left: 0;
+  }
+
+  .zen-resources li:last-child a {
+    margin-right: 0;
+  }
+  
+  .zen-resources a {
+    font-size: 1em;
+  }
+  
+  .explanation {
+    padding: 13.75em 0 0.5em;
+    width: 84%;
+    margin: 1px auto 0;
+    position: relative;
+    background: #faf3e6;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 2em;
+    -moz-column-count: 2;
+    -moz-column-gap: 2em;
+    -o-column-count: 2;
+    -o-column-gap: 2em;
+    column-count: 2;
+    column-gap: 2em;
+  }
+     
+  .explanation h3 {
+    font-size: 3.9em;
+    font-style: italic;
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+  
+  .participation h3 {
+    font-size: 5.25em;
+    background-size: 9em;
+  }
+  
+  .benefits:before {
+    bottom: 6.5rem;
+  }
+
+  .benefits:after {
+    bottom: -12.5rem;
+  }
+  
+  .benefits p:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 26em; 
+    margin: 0 auto -30.5em;
+    padding-bottom: 6em;
+    background:  url('img-look-right.png') no-repeat center 40%;
+    background-size: 28%;
+  }
+  
+  .benefits h3 {
+    font-size: 3.75em;
+  }
+  
+  .requirements {
+    padding: 11.5em 0 2.5em;
+    width: 84%;
+    margin: 0 auto 4.15em;
+    background-size: 68rem;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 2em;
+    -moz-column-count: 2;
+    -moz-column-gap: 2em;
+    -o-column-count: 2;
+    -o-column-gap: 2em;
+    column-count: 2;
+    column-gap: 2em;
+    line-height: 1.475;
+  }
+  
+  .requirements h3 {
+    font-size: 5.5em;
+    margin-bottom: 0.725em;
+    padding-bottom: 1.5rem;
+    background-size: 8em;
+  }
+  
+  .zen-github:after, .zen-validate-html:after {
+    font-size: 1.12rem;
+  }
+}
+
+@media (min-width:1050px) {
+  body {
+    font-size: 1.25em;
+  }
+  
+  .intro {
+    padding-top: 9em;
+  }
+  
+  .intro p,
+  .preamble,
+  .design-selection,
+  .design-selection ul,
+  .design-archives,
+  .zen-resources ul,
+  .participation p,
+  .benefits h3,
+  .benefits p {
+    max-width: 40rem;
+  }
+  
+  body:before {
+    border-left: 140px solid #faf3e6;
+    border-right: 140px solid #faf3e6;
+    border-top: 140px solid transparent;
+    margin: 0 auto -7em;
+  }
+  
+  .intro h1 {
+    font-size: 6em;
+  }
+  
+  .preamble h3:first-child {
+    font-size: 3em;
+  }
+  
+  .explanation h3 {
+    top: 1em;
+  }
+  
+  .benefits:before, .benefits:after {
+    font-size: 3.7em;
+    top: 64.25%;
+    height: 0;
+    padding: 0 3%;
+    width: auto;
+  }
+  
+  .benefits:before {
+    right: 63%;
+  }
+  
+  .benefits:after {
+    left: 63%;
+  }
+  
+  .benefits p:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 26em; 
+    margin: 0 auto -26em;
+    padding-bottom: 2em;
+    background:  url('img-look-right.png') no-repeat center center;
+    background-size: 42%;
+  }
+
+  .explanation,
+  .requirements {
+    max-width: 60em;
+  }
+  
+  .explanation {
+    padding: 9em 0 0.5em;
+  }
+     
+  .explanation h3 {
+    font-size: 3.3em;
+  }
+  
+  .requirements {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    -o-column-count: 3;
+    column-count: 3;
+  }
+  
+  .requirements p:last-child {
+    margin-bottom: -1.2rem;
+  }
+  
+  footer {
+    margin-top: 0;
+  }
+}
+
+
+@media (min-width:1200px) {
+  body {
+    font-size: 1.315em;
+  }
+  
+  .intro {
+    padding-top: 10.5em;
+  }
+  
+  body:before {
+    border-left: 168px solid #faf3e6;
+    border-right: 168px solid #faf3e6;
+    border-top: 168px solid transparent;
+    margin: 0 auto -8em;
+  }
+  
+  .intro h1 {
+    font-size: 7em;
+  }
+  
+  .intro h1:before {
+    background: url('img-sprite.png') no-repeat center 0.3em;
+    background-size: 56rem;
+    font-size: 2.75rem;
+  }
+  
+  .intro h2 {
+    padding-top: 5em;
+    background-size: 1.85em;
+  }
+  
+  .benefits:before {
+    right: 60%;
+  }
+  
+  .benefits:after {
+    left: 60%;
+  }
+  
+  .explanation {
+    padding: 10.5em 0 0.5em;
+  }
+     
+  .explanation h3 {
+    font-size: 3.7em;
+  }
+}
+
+@media (min-width:1300px) {
+  body {
+    font-size: 1.375em;
+  }
+  
+  .intro {
+    padding-top: 13.5em;
+  }
+  
+   body:before {
+    border-left: 198px solid #faf3e6;
+    border-right: 198px solid #faf3e6;
+    border-top: 198px solid transparent;
+    margin: 0 auto -9em;
+  }
+  
+  .intro h1 {
+    font-size: 7.35em;
+    line-height: 1.4;
+  }
+  
+  .intro h1:before {
+    background: url('img-sprite.png') no-repeat center 0.5em;
+    background-size: 58rem;
+    margin-bottom: 0;
+  }
+  
+  .benefits:before {
+    right: 58.5%;
+  }
+  
+  .benefits:after {
+    left: 58.5%;
+  }
+}
+
+
+/* ------- OMG FLEXBOX ------ */
+.page-wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -ms-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.intro {
+  -webkit-box-ordinal-group: 1;  
+  -moz-box-ordinal-group: 1;     
+  -ms-flex-order: 1;     
+  -webkit-order: 1;  
+  order: 1;
+  align-self: flex-start;
+  width: 100%;
+}
+
+.main {
+  -webkit-box-ordinal-group: 3;  
+  -moz-box-ordinal-group: 3;     
+  -ms-flex-order: 3;     
+  -webkit-order: 3;  
+  order: 3;
+  align-self: flex-start;
+  width: 100%;
+}
+
+.sidebar {
+  -webkit-box-ordinal-group: 2;  
+  -moz-box-ordinal-group: 2;     
+  -ms-flex-order: 2;     
+  -webkit-order: 2;  
+  order: 2;
+}
+
+	</style>
+</head>
+
+<!--
+
+
+
+	View source is a feature, not a bug. Thanks for your curiosity and
+	interest in participating!
+
+	Here are the submission guidelines for the new and improved csszengarden.com:
+
+	- CSS3? Of course! Prefix for ALL browsers where necessary.
+	- go responsive; test your layout at multiple screen sizes.
+	- your browser testing baseline: IE9+, recent Chrome/Firefox/Safari, and iOS/Android
+	- Graceful degradation is acceptable, and in fact highly encouraged.
+	- use classes for styling. Don't use ids.
+	- web fonts are cool, just make sure you have a license to share the files. Hosted
+	  services that are applied via the CSS file (ie. Google Fonts) will work fine, but
+	  most that require custom HTML won't. TypeKit is supported, see the readme on this
+	  page for usage instructions: https://github.com/mezzoblue/csszengarden.com/
+
+	And a few tips on building your CSS file:
+
+	- use :first-child, :last-child and :nth-child to get at non-classed elements
+	- use ::before and ::after to create pseudo-elements for extra styling
+	- use multiple background images to apply as many as you need to any element
+	- use the Kellum Method for image replacement, if still needed. http://goo.gl/GXxdI
+	- don't rely on the extra divs at the bottom. Use ::before and ::after instead.
+
+		
+-->
+
+<body id="css-zen-garden">
+<div class="page-wrapper">
+
+	<section class="intro" id="zen-intro">
+		<header role="banner">
+			<h1>CSS Zen Garden</h1>
+			<h2>The Beauty of <abbr title="Cascading Style Sheets">CSS</abbr> Design</h2>
+		</header>
+
+		<div class="summary" id="zen-summary" role="article">
+			<p>A demonstration of what can be accomplished through <abbr title="Cascading Style Sheets">CSS</abbr>-based design. Select any style sheet from the list to load it into this page.</p>
+			<p>Download the example <a href="/examples/index" title="This page's source HTML code, not to be modified.">html file</a> and <a href="/examples/style.css" title="This page's sample CSS, the file you may modify.">css file</a></p>
+		</div>
+
+		<div class="preamble" id="zen-preamble" role="article">
+			<h3>The Road to Enlightenment</h3>
+			<p>Littering a dark and dreary road lay the past relics of browser-specific tags, incompatible <abbr title="Document Object Model">DOM</abbr>s, broken <abbr title="Cascading Style Sheets">CSS</abbr> support, and abandoned browsers.</p>
+			<p>We must clear the mind of the past. Web enlightenment has been achieved thanks to the tireless efforts of folk like the <abbr title="World Wide Web Consortium">W3C</abbr>, <abbr title="Web Standards Project">WaSP</abbr>, and the major browser creators.</p>
+			<p>The CSS Zen Garden invites you to relax and meditate on the important lessons of the masters. Begin to see with clarity. Learn to use the time-honored techniques in new and invigorating fashion. Become one with the web.</p>
+		</div>
+	</section>
+
+	<div class="main supporting" id="zen-supporting" role="main">
+		<div class="explanation" id="zen-explanation" role="article">
+			<h3>So What is This About?</h3>
+			<p>There is a continuing need to show the power of <abbr title="Cascading Style Sheets">CSS</abbr>. The Zen Garden aims to excite, inspire, and encourage participation. To begin, view some of the existing designs in the list. Clicking on any one will load the style sheet into this very page. The <abbr title="HyperText Markup Language">HTML</abbr> remains the same, the only thing that has changed is the external <abbr title="Cascading Style Sheets">CSS</abbr> file. Yes, really.</p>
+			<p><abbr title="Cascading Style Sheets">CSS</abbr> allows complete and total control over the style of a hypertext document. The only way this can be illustrated in a way that gets people excited is by demonstrating what it can truly be, once the reins are placed in the hands of those able to create beauty from structure. Designers and coders alike have contributed to the beauty of the web; we can always push it further.</p>
+		</div>
+
+		<div class="participation" id="zen-participation" role="article">
+			<h3>Participation</h3>
+			<p>Strong visual design has always been our focus. You are modifying this page, so strong <abbr title="Cascading Style Sheets">CSS</abbr> skills are necessary too, but the example files are commented well enough that even <abbr title="Cascading Style Sheets">CSS</abbr> novices can use them as starting points. Please see the <a href="/pages/resources/" title="A listing of CSS-related resources"><abbr title="Cascading Style Sheets">CSS</abbr> Resource Guide</a> for advanced tutorials and tips on working with <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
+			<p>You may modify the style sheet in any way you wish, but not the <abbr title="HyperText Markup Language">HTML</abbr>. This may seem daunting at first if you&#8217;ve never worked this way before, but follow the listed links to learn more, and use the sample files as a guide.</p>
+			<p>Download the sample <a href="/examples/index" title="This page's source HTML code, not to be modified.">HTML</a> and <a href="/examples/style.css" title="This page's sample CSS, the file you may modify.">CSS</a> to work on a copy locally. Once you have completed your masterpiece (and please, don&#8217;t submit half-finished work) upload your <abbr title="Cascading Style Sheets">CSS</abbr> file to a web server under your control. <a href="/pages/submit/" title="Use the contact form to send us your CSS file">Send us a link</a> to an archive of that file and all associated assets, and if we choose to use it we will download it and place it on our server.</p>
+		</div>
+
+		<div class="benefits" id="zen-benefits" role="article">
+			<h3>Benefits</h3>
+			<p>Why participate? For recognition, inspiration, and a resource we can all refer to showing people how amazing <abbr title="Cascading Style Sheets">CSS</abbr> really can be. This site serves as equal parts inspiration for those working on the web today, learning tool for those who will be tomorrow, and gallery of future techniques we can all look forward to.</p>
+		</div>
+
+		<div class="requirements" id="zen-requirements" role="article">
+			<h3>Requirements</h3>
+			<p>Where possible, we would like to see mostly <abbr title="Cascading Style Sheets, levels 1 and 2">CSS 1 &amp; 2</abbr> usage. <abbr title="Cascading Style Sheets, levels 3 and 4">CSS 3 &amp; 4</abbr> should be limited to widely-supported elements only, or strong fallbacks should be provided. The CSS Zen Garden is about functional, practical <abbr title="Cascading Style Sheets">CSS</abbr> and not the latest bleeding-edge tricks viewable by 2% of the browsing public. The only real requirement we have is that your <abbr title="Cascading Style Sheets">CSS</abbr> validates.</p>
+			<p>Luckily, designing this way shows how well various browsers have implemented <abbr title="Cascading Style Sheets">CSS</abbr> by now. When sticking to the guidelines you should see fairly consistent results across most modern browsers. Due to the sheer number of user agents on the web these days &#8212; especially when you factor in mobile &#8212; pixel-perfect layouts may not be possible across every platform. That&#8217;s okay, but do test in as many as you can. Your design should work in at least IE9+ and the latest Chrome, Firefox, iOS and Android browsers (run by over 90% of the population).</p>
+			<p>We ask that you submit original artwork. Please respect copyright laws. Please keep objectionable material to a minimum, and try to incorporate unique and interesting visual themes to your work. We&#8217;re well past the point of needing another garden-related design.</p>
+			<p>This is a learning exercise as well as a demonstration. You retain full copyright on your graphics (with limited exceptions, see <a href="/pages/submit/guidelines/">submission guidelines</a>), but we ask you release your <abbr title="Cascading Style Sheets">CSS</abbr> under a Creative Commons license identical to the <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="View the Zen Garden's license information.">one on this site</a> so that others may learn from your work.</p>
+			<p role="contentinfo">By <a href="http://www.mezzoblue.com/">Dave Shea</a>. Bandwidth graciously donated by <a href="http://www.mediatemple.net/">mediatemple</a>. Now available: <a href="http://www.amazon.com/exec/obidos/ASIN/0321303474/mezzoblue-20/">Zen Garden, the book</a>.</p>
+		</div>
+
+		<footer>
+			<a href="http://validator.w3.org/check/referer" title="Check the validity of this site&#8217;s HTML" class="zen-validate-html">HTML</a>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer" title="Check the validity of this site&#8217;s CSS" class="zen-validate-css">CSS</a>
+			<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="View the Creative Commons license of this site: Attribution-NonCommercial-ShareAlike." class="zen-license">CC</a>
+			<a href="http://mezzoblue.com/zengarden/faq/#aaa" title="Read about the accessibility of this site" class="zen-accessibility">A11y</a>
+			<a href="https://github.com/mezzoblue/csszengarden.com" title="Fork this site on Github" class="zen-github">GH</a>
+		</footer>
+
+	</div>
+
+
+	<aside class="sidebar" role="complementary">
+		<div class="wrapper">
+
+			<div class="design-selection" id="design-selection">
+				<h3 class="select">Select a Design:</h3>
+				<nav role="navigation">
+					<ul>
+					<li>
+						<a href="/221/" class="design-name">Mid Century Modern</a> by						<a href="http://andrewlohman.com/" class="designer-name">Andrew Lohman</a>
+					</li>					<li>
+						<a href="/220/" class="design-name">Garments</a> by						<a href="http://danielmall.com/" class="designer-name">Dan Mall</a>
+					</li>					<li>
+						<a href="/219/" class="design-name">Steel</a> by						<a href="http://steffen-knoeller.de" class="designer-name">Steffen Knoeller</a>
+					</li>					<li>
+						<a href="/218/" class="design-name">Apothecary</a> by						<a href="http://trentwalton.com" class="designer-name">Trent Walton</a>
+					</li>					<li>
+						<a href="/217/" class="design-name">Screen Filler</a> by						<a href="http://elliotjaystocks.com/" class="designer-name">Elliot Jay Stocks</a>
+					</li>					<li>
+						<a href="/216/" class="design-name">Fountain Kiss</a> by						<a href="http://jeremycarlson.com" class="designer-name">Jeremy Carlson</a>
+					</li>					<li>
+						<a href="/215/" class="design-name">A Robot Named Jimmy</a> by						<a href="http://meltmedia.com/" class="designer-name">meltmedia</a>
+					</li>					<li>
+						<a href="/214/" class="design-name">Verde Moderna</a> by						<a href="http://www.mezzoblue.com/" class="designer-name">Dave Shea</a>
+					</li>					</ul>
+				</nav>
+			</div>
+
+			<div class="design-archives" id="design-archives">
+				<h3 class="archives">Archives:</h3>
+				<nav role="navigation">
+					<ul>
+						<li class="next">
+							<a href="/218/page1">
+								Next Designs <span class="indicator">&rsaquo;</span>
+							</a>
+						</li>
+						<li class="viewall">
+							<a href="/pages/alldesigns/" title="View every submission to the Zen Garden.">
+								View All Designs							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+			<div class="zen-resources" id="zen-resources">
+				<h3 class="resources">Resources:</h3>
+				<ul>
+					<li class="view-css">
+						<a href="/218/218.css" title="View the source CSS file of the currently-viewed design.">
+							View This Design&#8217;s <abbr title="Cascading Style Sheets">CSS</abbr>						</a>
+					</li>
+					<li class="css-resources">
+						<a href="/pages/resources/" title="Links to great sites with information on using CSS.">
+							<abbr title="Cascading Style Sheets">CSS</abbr> Resources						</a>
+					</li>
+					<li class="zen-faq">
+						<a href="/pages/faq/" title="A list of Frequently Asked Questions about the Zen Garden.">
+							<abbr title="Frequently Asked Questions">FAQ</abbr>						</a>
+					</li>
+					<li class="zen-submit">
+						<a href="/pages/submit/" title="Send in your own CSS file.">
+							Submit a Design						</a>
+					</li>
+					<li class="zen-translations">
+						<a href="/pages/translations/" title="View translated versions of this page.">
+							Translations						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</aside>
+
+
+</div>
+
+<!--
+
+	These superfluous divs/spans were originally provided as catch-alls to add extra imagery.
+	These days we have full ::before and ::after support, favour using those instead.
+	These only remain for historical design compatibility. They might go away one day.
+		
+-->
+<div class="extra1" role="presentation"></div><div class="extra2" role="presentation"></div><div class="extra3" role="presentation"></div>
+<div class="extra4" role="presentation"></div><div class="extra5" role="presentation"></div><div class="extra6" role="presentation"></div>
+
+</body>
+</html>
